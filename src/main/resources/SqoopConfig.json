@@ -1,0 +1,15 @@
+{
+  "oracle": {
+    "operation": "import",
+    "database": "oracle",
+    "connect": "jdbc:oracle:thin:@192.168.1.227:1521/ORCL",
+    "username": "SYSTEM",
+    "password":"Inspur2016",
+    "hive-table":"zs_yjsf",
+    "partition-by":"day",
+    "partition-value":"20170718",
+    "split-by":"yzpzxh",
+    "num-mappers":"3",
+    "query":"select * from hx_zs.zs_yjsf where yzfsrq >= to_date('2016-06-01 00:00:00','yyyy-mm-dd hh24:mi:ss') and  $CONDITIONS"
+  }
+}
